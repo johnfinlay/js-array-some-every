@@ -69,7 +69,9 @@ function hasNoDuplicates(arr) {
 }
 
 /*
-Write a function called hasCertainKey which accepts an array of objects and a key, and returns true if every single object in the array contains that key. Otherwise it should return false.
+Write a function called hasCertainKey which accepts an array of objects 
+and a key, and returns true if every single object in the array contains 
+that key. Otherwise it should return false.
 
 Examples:
     var arr = [
@@ -83,10 +85,17 @@ Examples:
     hasCertainKey(arr,'isCatOwner') // false
 */
 
-function hasCertainKey(arr, key) {}
+function hasCertainKey(arr, key) {
+    return arr.every(function(obj) {
+        return Object.keys(obj).includes(key);
+    });
+}
 
 /*
-Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.
+Write a function called hasCertainValue which accepts an array of 
+objects and a key, and a value, and returns true if every single object 
+in the array contains that value for the specific key. Otherwise it 
+should return false.
 
 Examples:
     var arr = [
@@ -101,4 +110,8 @@ Examples:
     
 */
 
-function hasCertainValue(arr, key, searchValue) {}
+function hasCertainValue(arr, key, searchValue) {
+    return arr.every(function(obj) {
+        return obj[key] === searchValue;
+    });
+}
