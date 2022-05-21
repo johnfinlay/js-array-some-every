@@ -25,7 +25,7 @@ Examples:
 */
 
 function hasAZero(num) {
-    let str = toString(num);
+    let str = num.toString();
     const arr = str.split('');
     return arr.some(function(char) {
         return char === '0';
